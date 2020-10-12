@@ -1,0 +1,701 @@
+$CorPrimaria: #2B4355;
+$CorSecundria: #5E8EB2;
+@mixin flex-pattern {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin table{
+    margin: 0 auto;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(#000, 0.3);
+    border-collapse: collapse;
+    thead{
+        background-color: $CorSecundria;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+    tbody{
+        background-color: darken($CorPrimaria,15);
+    }
+    tr:nth-of-type(even){
+        background: #FBFBFB;
+        color: $CorPrimaria;
+    }
+    .status{
+        width: 1.5rem;
+        height: 1.6rem;
+        display: inline-block;
+        border-radius: 50%;
+        margin: 1rem;
+    }
+    .andamento{
+        background-color: #F6BA3F;
+    }
+    .concluido{
+        background-color: #38CB6A;
+    }
+    .terminado{
+        background-color: rgb(202, 27, 27);
+    }
+    td:first-of-type{
+        div{
+            display: flex;
+            img{
+                width: 20%;
+                margin-right: 0.5rem;
+            }
+            p{
+                align-self: center;
+            }
+        }
+    }
+}
+
+:root{
+    font-size: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+.btnpadrao{
+    background-color: #fff;
+    color: $CorPrimaria;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid lighten(#000, 70);
+    box-shadow: 3px 3px 6px rgba(80, 80, 80, 0.5);
+    display: block;
+    margin: 1.4rem auto;
+    &:active{
+        background-color: darken(#fff,20);
+        color: lighten(rgb(29,29,29), 20);
+    }
+}
+//Modularizar para o _header.scss
+header{
+    @include flex-pattern();
+    padding: 1rem;
+    background-color: $CorPrimaria;
+    h1{
+        display: none;
+    }
+    .username_bar{
+        font-weight: bold;
+        display: flex;
+        img{
+            width: 50px;
+            border-radius: 100%;
+        }
+    }
+    img{
+        width: 80px;
+    }
+    ul{
+        @include flex-pattern();
+        list-style-type: none;
+        justify-self: center;
+        li{
+            padding: 1rem;
+            font-size: 1.4rem;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+            text-shadow: 2px 0px 4px rgb(32, 32, 32);
+            &:hover{
+                transition: 0.2s;
+                border-bottom: 3px solid $CorSecundria;
+            }
+        }
+        
+    }
+    input{
+        width: 12rem;
+        height: 2rem;
+        align-self: center;
+        border: 2px solid #fff;
+        background-color: $CorPrimaria;
+        border-radius: 8px;
+        color: #fff;
+        font-weight: 580;
+        &::placeholder{
+            color: #fff;
+            text-align: center;
+        }
+    }
+}
+//Fim do Header.scss
+//Modularizar para _main.scss
+#destaquesliders,#explore{
+    width: 100%;
+    min-height: 250px;
+    background-color: rgb(68, 68, 68);
+}
+#explore{
+    text-align: center;
+    h2{
+        font-size: 3rem;
+        padding: 1.6rem;
+    }
+    label{
+        padding: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    label:last-of-type{
+        display: block;
+        
+    }
+    select{
+        width: 12rem;
+        height: 1.8rem;
+        margin: 0 auto;
+    }
+}
+.exibicao{
+    width: 100%;
+    padding: 1rem;
+    &:last-of-type{
+        margin-bottom: 2rem;
+    }
+    &:nth-of-type(odd){
+        background-color: darken(#fff,15)
+    }
+    h2{
+        margin: 1.5rem 0;
+        margin-left: 1.8rem;
+    }
+    .exibicao-container{
+        display: flex;
+        justify-content: space-around;
+        div{
+            width: 20%;
+            height: 164px;
+            background-color: rebeccapurple;
+            border: 1px solid #000;
+        }
+    }
+    
+}
+#loginbox{
+    color: rgb(31, 31, 31);
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    span:first-child{
+        float: right;
+        button{
+            border-radius: 4px;
+        }
+    }
+    h2{
+        font-size: 3.5rem;
+        margin: 2rem 1rem;
+    }
+    .login-logobg{
+        width: 18%;
+        height: 418px;
+        background-color:#555454;
+        background-image: url(img/cauevaimandar.jpg);
+        margin-left: 1rem;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .logininput{
+        width: 35%;
+        background-color: #c4c4c4;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 10px;
+        form{
+            margin-left: 1rem;
+        }
+        label:nth-child(1),label:nth-child(3){
+            display: block;
+        }
+        label:nth-of-type(2),input[type="submit"]{
+            margin-top: 1rem;
+        }
+        input:not([type="checkbox"]){
+            padding: 0.4rem;
+            width: 17rem;
+            font-size: 1rem;
+            border-radius: 10px;
+        }
+        a,input[type="submit"]{
+            display: block;
+            padding: 0.3rem;
+            margin-bottom: 1rem;
+        }
+        h2:last-of-type{
+            font-size: 2.8rem;
+        }
+        .cadastro-escolha{
+            display: flex;
+            justify-content: center;
+            margin-top: 20%;
+            a{
+                width: 120px;
+                padding: 40px;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+                &:nth-of-type(1){
+                    background: #555454;
+                    color: white;
+                }
+                &:nth-of-type(2){
+                    background-color: #e7e7e7;
+                    color: #606060;
+                }
+            }
+        }
+    }
+}
+#cadastrobox{
+    padding: 10px;
+    width: 40%;
+    background-color: #c4c4c4;
+    margin: 2rem auto;
+    border-radius: 10px;
+    form{
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    label,input[type="submit"]{
+        font-size: 1.3rem;
+        margin: 1rem 0;
+        display: block;
+    }
+    input{
+        width: 70%;
+        padding: 0.3rem;
+        font-size: 1.2rem
+    }
+    input[type="submit"]{
+        border-radius: 10px;
+    }}
+.tab{
+    display: none;
+}
+input[type="radio"]{
+    display: none;
+}
+#tabs{
+    margin-top: 1rem;
+    hr{
+        margin-top: 1rem;
+    }
+    label:first-of-type{
+        //margin-left: 6rem;
+    }
+    label{
+        padding: 1rem;
+    }
+    h3{
+        margin: 1rem;
+        text-align: center;
+    }
+}
+input:checked+label{
+    border-bottom: 1px solid $CorPrimaria;
+    transition: 1s;
+    background-color: darken(#fff,5);
+}
+#sobre_campanha:checked ~ .sobre_campanha{
+    display: block;
+}
+.sobre_campanha{
+    .detalhes_campanha{
+        width: 50%;
+        img{
+            display: block;
+            width: inherit;
+            margin: 2rem auto;
+        }
+    }
+    .flexcontainer{
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    #cards-recompensa{
+        width: 30%;
+        background-color: #fff;
+        h4{
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+        .destaque{
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        h3{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+    h4{
+        text-align: center;
+    }
+    .card-recompensa{
+        width: 65%;
+        margin: 2rem auto;
+        padding: 10px;
+        background-color: #EFEFEF;
+        border: 1px solid rgb(216, 216, 216);
+        padding: 1rem;
+        img{
+            width: 70%;
+            display: block;
+            margin: 0.4rem auto;
+        }
+        .detalhe{
+            font-size: 0.8rem;
+            color: darken(#EFEFEF,40);
+            text-align: center;
+        }
+    }
+}
+.cardempresario{
+    width: 100%;
+    top: 510px;
+    margin: 0 auto;
+    padding: 1.2rem 0.6rem;
+    background-color:lighten(#dfdfdf,40);
+    box-shadow: 1px 1px 5px rgba(#000, 0.3);
+    border-radius: 0.8rem;
+    h4{
+        padding: 0.5rem;
+        font-weight: bold;
+        color: lighten(#000,30);
+    }
+    img{
+        float: left;
+        width: 20%;
+        margin-left: 0.4rem;
+        border-radius: 40px;
+    }
+    a{
+        display: block;
+        color: $CorPrimaria;
+        text-decoration: none;
+    }
+}
+.titulo_campanha{
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+    margin: 1rem;
+}
+.campanha-flex{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.imgFrase_campanha{
+    width: 50%;
+    color: lighten(#000,70);
+    span{
+        display: flex;
+        justify-content: space-around;
+    }
+    .sentence{
+        color: lighten(#000,70);
+        background-color: #fff;
+        color: $CorPrimaria;
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 10px;
+        border: 1px solid lighten(#000, 70);
+        box-shadow: 3px 3px 6px rgba(80, 80, 80, 0.5);
+        display: block;
+        margin: 1.4rem auto;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.metaePessoa{
+    width: 28rem;
+    height: 250px;
+}
+.meta_campanha{
+    p:nth-of-type(1){
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    div{
+        display: flex;
+        justify-content: space-between;
+        color: #606060;
+    }
+} 
+.meta_campanha>*{
+    margin: 0.6rem;
+}
+.meta_campanha{
+    width: 80%;
+    padding: 1.2rem 1.6rem;
+    background-color:lighten(#dfdfdf,40);
+    box-shadow: 1px 1px 5px rgba(#000, 0.3);
+    margin: 0 auto;
+}
+progress{
+    display: block;
+    border: 1px solid #000;
+    border-radius: 0.2rem;
+    width: 90%;
+}
+#apoiadores_campanha:checked ~ .apoiadores_campanha{
+    display: block;
+}
+.apoiadores_campanha{
+    h3{
+        width: 200px;
+        margin-left: 4rem;
+    }
+    h3+p{
+        margin-left: 1rem;
+    }
+    span{
+        font-size: 4rem;
+        margin-left: 4rem;
+    }
+    .container_apoiadores{
+        margin: 1.2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: #EFEFEF;
+        padding: 1rem;
+    }
+    p{
+        display: block;
+    }
+    .apoiador_card{
+        padding: 1rem;
+        width: 16rem;
+        border-radius: 4px;
+        background-color: #fff;
+        margin: 2rem;
+        img{
+            width: 100px;
+            display: block;
+            border-radius: 50px;
+            margin: 0 auto;
+        }
+        h4{
+            font-size: 1.4rem;
+        }
+        h4,p{
+            text-align: center;
+        }
+        margin-bottom: 1rem;
+    }
+}
+#comentarios_campanha:checked ~ .comentarios_campanha{
+    display: block;
+}
+.comentarios_campanha{
+    margin-top: 1rem;
+}
+#perfil{
+    width: 98%;
+    margin: 0 auto;
+    h2{
+        font-size: 4rem;
+        margin: 4.5rem;
+        text-align: center;
+    }
+    h3{
+        font-size: 2.5rem;
+        margin: 2.5rem;
+    }
+    #tabs{
+        width: 100%;
+        label{
+            margin-left: 6rem;
+        }
+        h3{
+            margin: 1rem;
+            span{
+                font-size: 2.4rem;
+            }
+        }
+    }
+    .tab{
+        margin-top: 1rem;
+        border: 1px solid #C4C4C4;
+        padding: 2rem;
+    }
+    #criar_campanha:checked ~ .criar_campanha{
+        display: block;
+    }
+    #investimentos_perfil:checked ~ .investimentos_perfil{
+        display: block;
+    }
+    #perfil_tab:checked ~ .perfil_tab{
+        display: block;
+    }
+    #saldo_perfil:checked ~ .saldo_perfil{
+        display: block;
+    }
+    #sair_perfil:checked ~ .sair_perfil{
+        display: block;
+    }
+    td,th{
+        padding: 1rem;
+    }
+    .criar_campanha{
+        #btnCriaCampanha{
+            transition: 0.4s;
+            font-size: 1.4rem;
+            color: rgb(29, 29, 29);
+            margin: 2rem auto;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #acacac;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px rgba(#000, 0.4);
+            &:active{
+                background-color: darken(#fff,20);
+                color: lighten(rgb(29,29,29), 20);
+            }
+            &:hover{
+                box-shadow: 5px 5px 8px rgba(#000, 0.4);
+                font-size: 1.5rem;
+                transition: 0.4s;
+            }
+        }
+
+        table{
+            @include table();
+        }
+    }
+    .investimentos_perfil{
+        table{
+            @include table()
+        }
+        td:nth-of-type(2){
+            display: flex;
+        }
+        td:nth-of-type(3){
+            p:nth-of-type(odd){
+                font-weight: bolder;
+            }
+            p:nth-of-type(even){
+                span{
+                    color: black;
+                }
+            }
+        }
+        tr{
+            border-bottom: 1px solid #606060;
+        }
+    }
+    .box_mudaperfil{
+        width: 80%;
+        padding: 2rem;
+        margin: 1.8rem auto;
+        box-shadow: 2px 2px 4px rgb(54, 54, 54);
+        border-radius: 10px;
+        h4{
+            margin: 14px 0;
+        }
+        input{
+            padding: 0.4rem;
+            width: 30%;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+    }
+    .box_mudaperfil:nth-of-type(odd){
+        color: white;
+        background-color: $CorPrimaria;
+            
+        input{
+            background-color: $CorPrimaria;
+            border: 2px solid #fff;
+        }
+        input::placeholder{
+            color: #acacac;
+        }
+    }
+    .box_mudaperfil:nth-of-type(even){
+        color: $CorPrimaria;
+        background-color: #fbfbfb;
+        border: 1px solid rgb(173, 173, 173);
+        input{
+            border: 2px solid $CorPrimaria;
+        }
+        input::placeholder{
+            color: $CorPrimaria;
+        }
+    }
+    .box_mudaperfil:last-of-type{
+        display: flex;
+        input{
+            display: none;
+        }
+        .addfotobtn{
+            padding: 2px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px #000;
+            position: absolute;
+            left: 65%;
+        }
+        img{
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            border: 5px solid #fff;
+            border-radius: 4px;
+        }
+        padding-bottom: 5rem;
+    }
+}
+#saldobox{
+    .box_mudaperfil{
+        flex-direction: column;
+    }
+    button{
+        font-size: 1rem;
+        float: right;
+    }
+    h4{
+        display: block;
+    }
+    table{
+        border-collapse: collapse;
+        font-weight: bold;
+        border: 1px solid rgba(rgb(255, 255, 255), 0.3);
+        thead{
+            background-color: lighten($CorPrimaria, 20);
+            color: #fff;
+        }
+        tr:nth-of-type(even){
+            background-color: #fff;
+            color: $CorPrimaria;
+        }
+    }
+}
+//fim main
+footer{
+    margin-top: 200px;
+    height: 165px;
+    background-color: $CorPrimaria;
+}

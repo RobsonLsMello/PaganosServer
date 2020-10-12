@@ -1,0 +1,167 @@
+<%- include ('../partials/head.ejs'); -%>
+
+<main>
+    <h2 class="titulo_campanha nomeCampanha">Restauração do Acervo</h2>
+    <div class="campanha-flex">
+        <div class="imgFrase_campanha">
+            <img src="/img/Livraria.jpg" id="fotoCampanha" alt="Estante de livros">
+            <span>
+                <p id="localizacao"><a href="">São Paulo-SP</a></p>
+                <p id="categoria"><a href="">Alimentação</a></p>
+                <p id="tops">Investimentos top's</p>
+            </span>
+        </div>
+        <div class="metaePessoa">
+            <div class="meta_campanha">
+                <h2 class="nomeCampanha">Restauração do Acervo</h2>
+                <p id="meta">R$5.000,00</p>
+                <span class="descricao_meta">Apoiado por <span class="nDeApoiadores">25</span> pessoa(s)</span>
+                <div>
+                    <p id="porcentagem">50%</p> <p>10 dias restantes</p>
+                </div>
+                <progress value="50" max="100" id="barProgresso">
+            </div>
+            <button class="apoiar btnpadrao" id="apoiar">Apoie esse negócio</button>
+            <div class="cardempresario">
+                <img id="fotoLogo" src="/img/perfil/default.jpg" alt="Logo">
+                <h4 id="razaoSocial">Marta Jordane</h4>
+                <div id="redesSociais">
+                    <a href="">www.facebook.com</a>
+                    <a href="">www.instagram.com</a>
+                    <a href="">www.livrariabelem.com</a>
+                    <a href="">www.linkedin.com</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div id="tabs">
+        <input type="radio" name="tabs" id="sobre_campanha" value="campanha">
+        <label for="sobre_campanha">Sobre</label>
+        <input type="radio" name="tabs" id="apoiadores_campanha" value="apoiadores">
+        <label for="apoiadores_campanha">Apoiadores</label>
+        <input type="radio" name="tabs" id="comentarios_campanha" value="comentarios">
+        <label for="comentarios_campanha">Comentários</label>
+        <hr>
+        <div class="tab sobre_campanha">
+            <div class="flexcontainer">
+                <div class="detalhes_campanha">
+                    <h3 id="headline">Headline Foda</h3>
+                    <br>
+                    <p id="sobre">Você deve me apoiar ou vou te matar Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam error ipsum laudantium quo vitae, qui sequi sed, molestias quae ex aut officiis consectetur corporis repudiandae quaerat voluptate porro odio deserunt.</p>
+                    <!-- <h4>Nós temos algo para você</h4>
+                    <img src="/img/perfil/default.jpg" alt="Poo satânico">
+                    <figcaption >São Paulo, São Paulo    Alimentação</figcaption>
+                    <p>Acreditamos que pactos devem ser feitos com Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla blanditiis similique nemo vero aliquid! Nobis sapiente quibusdam vel quidem incidunt maxime voluptatem eius praesentium? Asperiores dicta tempora quaerat ea unde.</p> -->
+                </div>
+                <section id="cards-recompensa">
+                    <h3>Recompensas</h3>
+                    <article class="card-recompensa">
+                        <h4>1ª Recompensa</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel amet commodi deleniti?</p>
+                    </article>
+                    <article class="card-recompensa">
+                        <h4>2ª Recompensa</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel amet commodi deleniti?</p>
+                        <img src="/img/perfil/default.jpg" alt="Poo Diabólico">
+                    </article>
+                    <article class="card-recompensa">
+                        <h4>3ª Recompensa</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel amet commodi deleniti?</p>
+                        <img src="/img/perfil/default.jpg" alt="Poo Diabólico">
+                    </article>
+                    <article class="card-recompensa">
+                        <h4>4ª Recompensa</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel amet commodi deleniti?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nam reiciendis nisi sed temporibus nemo expedita optio omnis ratione est? Suscipit esse nam sint facere perferendis repudiandae, modi assumenda! Asperiores!</p>
+                        <img src="/img/perfil/default.jpg" alt="Poo Diabólico">
+                    </article>
+                </section>
+            </div>
+        </div>
+        <div class="tab apoiadores_campanha">
+                <span class="nDeApoiadores">25</span>
+                <h3>Pessoas apoiaram seu negócio</h3>
+                <p>Apoiadores Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dicta minima, quo quod, recusandae expedita voluptatibus, illum doloribus magni ipsa ducimus porro! Repellendus consequuntur autem quia molestiae id, temporibus velit!</p>
+            <div class="container_apoiadores">
+                <div class="apoiador_card">
+                    <img src="/img/perfil/default.jpg" alt="img de exemplo">
+                    <h4 class="nomeApoiador">Nome do Apoiador</h4>
+                    <p class="cidadeApoiador">Santos/SP</p>
+                    <p>26 Projetos Apoiados</p>
+                </div>
+                <div class="apoiador_card">
+                    <img src="/img/perfil/default.jpg" alt="img de exemplo">
+                    <h4 class="nomeApoiador">Nome do Apoiador</h4>
+                    <p class="cidadeApoiador">Porto Alegre/RS</p>
+                    <p>22 Projetos Apoiados</p>
+                </div>
+                <div class="apoiador_card">
+                    <img src="/img/perfil/default.jpg" alt="img de exemplo">
+                    <h4 class="nomeApoiador">Nome do Apoiador</h4>
+                    <p class="cidadeApoiador">Macaé/RJ</p>
+                    <p>20 Projetos Apoiados</p>
+                </div>
+                <div class="apoiador_card">
+                    <img src="/img/perfil/default.jpg" alt="img de exemplo">
+                    <h4 class="nomeApoiador">Nome do Apoiador</h4>
+                    <p class="cidadeApoiador">Blumenau/SC</p>
+                    <p>14 Projetos Apoiados</p>
+                </div>
+                <div class="apoiador_card">
+                    <img src="/img/perfil/default.jpg" alt="img de exemplo">
+                    <h4 class="nomeApoiador">Nome do Apoiador</h4>
+                    <p class="cidadeApoiador">Santos/SP</p>
+                    <p>26 Projetos Apoiados</p>
+                </div>
+                <div class="apoiador_card">
+                    <img src="/img/perfil/default.jpg" alt="img de exemplo">
+                    <h4 class="nomeApoiador">Nome do Apoiador</h4>
+                    <p class="cidadeApoiador">Porto Alegre/RS</p>
+                    <p>22 Projetos Apoiados</p>
+                </div>
+                <div class="apoiador_card">
+                    <img src="/img/perfil/default.jpg" alt="img de exemplo">
+                    <h4 class="nomeApoiador">Nome do Apoiador</h4>
+                    <p class="cidadeApoiador">Macaé/RJ</p>
+                    <p>20 Projetos Apoiados</p>
+                </div>
+                <div class="apoiador_card">
+                    <img src="/img/perfil/default.jpg" alt="img de exemplo">
+                    <h4 class="nomeApoiador">Nome do Apoiador</h4>
+                    <p class="cidadeApoiador">Blumenau/SC</p>
+                    <p>14 Projetos Apoiados</p>
+                </div>
+                <div class="apoiador_card">
+                    <img src="/img/perfil/default.jpg" alt="img de exemplo">
+                    <h4 class="nomeApoiador">Nome do Apoiador</h4>
+                    <p class="cidadeApoiador">Santos/SP</p>
+                    <p>26 Projetos Apoiados</p>
+                </div>
+                <div class="apoiador_card">
+                    <img src="/img/perfil/default.jpg" alt="img de exemplo">
+                    <h4 class="nomeApoiador">Nome do Apoiador</h4>
+                    <p class="cidadeApoiador">Porto Alegre/RS</p>
+                    <p>22 Projetos Apoiados</p>
+                </div>
+                <div class="apoiador_card">
+                    <img src="/img/perfil/default.jpg" alt="img de exemplo">
+                    <h4 class="nomeApoiador">Nome do Apoiador</h4>
+                    <p class="cidadeApoiador">Macaé/RJ</p>
+                    <p>20 Projetos Apoiados</p>
+                </div>
+                <div class="apoiador_card">
+                    <img src="/img/perfil/default.jpg" alt="img de exemplo">
+                    <h4 class="nomeApoiador">Nome do Apoiador</h4>
+                    <p class="cidadeApoiador">Blumenau/SC</p>
+                    <p>14 Projetos Apoiados</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab comentarios_campanha">
+            <div class="fb-comments" id="comments" data-href="https://paganos.com.br" data-numposts="5" data-width=""></div>
+        </div>
+    </div>
+</main>   
+
+<%- include ('../partials/foot.ejs'); -%>

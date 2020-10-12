@@ -1,0 +1,274 @@
+<%- include ('../partials/head.ejs'); -%>
+
+<main>
+    <div id="perfil">
+            <h2 id="nome">Thiago Radesh</h2>
+        <div id="tabs">
+            <input type="radio" name="tabs" id="criar_campanha" value="campanha">
+            <label for="criar_campanha">Campanha</label>
+            <input type="radio" name="tabs" id="investimentos_perfil" value="investimentos">
+            <label for="investimentos_perfil">Investimentos</label>
+            <input type="radio" name="tabs" id="perfil_tab" value="perfil">
+            <label for="perfil_tab">Perfil</label>
+            <input type="radio" name="tabs" id="saldo_perfil" value="saldo">
+            <label for="saldo_perfil">Saldo</label>
+            <input type="radio" name="tabs" id="sair_perfil" value="sair">
+            <label for="sair_perfil">Sair</label>
+            <div class="tab criar_campanha">
+                <!--Janela Modal Javascript-->
+                <button id="btnCriaCampanha">Crie sua campanha</button>
+                <h3>Campanhas</h3>
+                <table id="tcampanhas">
+                    <thead>
+                        <th>Nome da Campanha</th>
+                        <th>Quantidade de Investidores</th>
+                        <th>Total de Investimentos</th>
+                        <th>Média de Investimento</th>
+                        <th>Status</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <img src="img/img-exemplo.jpg" alt="Poo 666 ksksks">
+                                    <p>
+                                        Ingreditens para padaria - Raio de sol
+                                    </p>
+                                </div>
+                            </td>
+                            <td>
+                                05
+                            </td>
+                            <td>
+                                R$600,00
+                            </td>
+                            <td>
+                                R$120,00
+                            </td>
+                            <td>
+                                <span class="status concluido"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <img src="img/img-exemplo.jpg" alt="Poo 666 ksksks">
+                                    <p>
+                                        Reforma na loja - Brejo da Brenda
+                                    </p>
+                                </div>
+                            </td>
+                            <td>
+                                05
+                            </td>
+                            <td>
+                                R$600,00
+                            </td>
+                            <td>
+                                R$120,00
+                            </td>
+                            <td>
+                                <span class="status terminado"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <img src="img/img-exemplo.jpg" alt="Poo 666 ksksks">
+                                    <p>
+                                        Manutenção do material - Oficina do João
+                                    </p>
+                                </div>
+                            </td>
+                            <td>
+                                05
+                            </td>
+                            <td>
+                                R$600,00
+                            </td>
+                            <td>
+                                R$120,00
+                            </td>
+                            <td>
+                                <span class="status terminado"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab investimentos_perfil">
+                <h3>Investimentos</h3>
+                <table id="tInvestimento">
+                    <thead>
+                        <th>Campanhas</th>
+                        <th>Investimentos</th>
+                        <th>Benefícios</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <img src="img/img-exemplo.jpg" alt="Poo mto puto">
+                                    <p>Ingredientes para padaria - Raio de sol</p>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status terminado"></span>
+                                <div>
+                                    <p>R$ 0,00</p>
+                                    <p>Processando em 26/03/21</p>
+                                    <p>(forma de pagamento - Cartão ou Boleto)</p>
+                                </div>
+                            </td>
+                            <td>
+                                <p>Empréstimo financeiro</p>
+                                <p>0,5% durante <span>2 meses</span></p>
+                                <p>Data para receber:</p>
+                                <p>26/04/2021</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <img src="img/img-exemplo.jpg" alt="Poo mto puto">
+                                    <p>Reforma na loja - Brejo da Brenda</p>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status andamento"></span>
+                                <div>
+                                    <p>R$ 0,00</p>
+                                    <p>Processando em 26/03/21</p>
+                                    <p>(forma de pagamento - Cartão ou Boleto)</p>
+                                </div>
+                            </td>
+                            <td>
+                                <p>Empréstimo financeiro</p>
+                                <p>0,5% durante <span>2 meses</span></p>
+                                <p>Data para receber:</p>
+                                <p>26/04/2021</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <img src="img/img-exemplo.jpg" alt="Poo mto puto">
+                                    <p>Manutenção do material - Oficina do João</p>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="status concluido"></span>
+                                <div>
+                                    <p>R$ 0,00</p>
+                                    <p>Processando em 26/03/21</p>
+                                    <p>(forma de pagamento - Cartão ou Boleto)</p>
+                                </div>
+                            </td>
+                            <td>
+                                <p>Empréstimo</p>
+                                <p>0,5% durante <span>2 meses</span></p>
+                                <p>Data para receber:</p>
+                                <p>26/04/2021</p>
+                            </td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab perfil_tab">
+                <h3>Perfil</h3>
+                <div>
+                    <div class="box_mudaperfil">
+                        <h4>Email</h4>
+                        <p>Mantenha esse email atualizado pois ele é o canal de comunicação entre você, a equipe do
+                            Paga nós e a equipe dos projetos que você investiu.</p>
+                        <input type="email" name="mudaremail" id="mudaremail" placeholder="Nome do email do usuário">
+                    </div>
+                    <div class="box_mudaperfil">
+                        <h4>Nome do Perfil do Usuário</h4>
+                        <p>Esse será o nome que os demais usuários irão ver seu nome.                                           </p>
+                        <input type="text" name="mudarnome" id="mudarnome" placeholder="Nome do usuário">
+                    </div>
+                    <div class="box_mudaperfil">
+                        <h4>Altere sua senha</h4>
+                        <p>Aqui você tem a possibilidade de alterar sua senha</p>
+                        <input type="password" name="senha_antiga" id="senha_antiga" placeholder="Senha antiga">
+                        <input type="password" name="senha_nova" id="senha_nova" placeholder="Senha nova">
+                    </div>
+                    <div class="box_mudaperfil">
+                        <h4>Links</h4>
+                        <p>Coloque links para deixar suas campanhas mais completas. Uma boa forma de divulgar
+                            para novos investidores</p>
+                        <input type="text" name="link1" id="link1" placeholder="Link(Instagram, Facebook, Linkedin, Site)">
+                        <input type="text" name="link2" id="link2" placeholder="Link(Instagram, Facebook, Linkedin, Site)"><br>
+                        <input type="text" name="link3" id="link3" placeholder="Link(Instagram, Facebook, Linkedin, Site)">
+                        <input type="text" name="link4" id="link4" placeholder="Link(Instagram, Facebook, Linkedin, Site)">
+
+                    </div>
+                    <div class="box_mudaperfil">
+                        <div>
+                            <h4>Imagem do perfil</h4>
+                            <p>Essa imagem será utilizada como miniatura do seu perfil ( PNG, JPG 
+                                tamanho 280x208)</p>
+                        </div>
+                        <div>
+                            <img src="img/thiago_radesh.jpg" id="fotoPerfil" alt="Homem de óculos de descendência indiana">
+                            <label class="addfotobtn" for="perfil_foto">Escolher foto</label>
+                            <input type="file" name="perfil_foto" id="perfil_foto" accept="image/jpeg, image/png">
+                        </div>
+                    </div>
+                    <button class="btnpadrao">
+                        Confirmar alterações
+                    </button>
+                </div>
+            
+        </div>
+        <div class="tab saldo_perfil">
+            <h3>Saldo</h3>
+            <div id="saldobox">
+                <div class="box_mudaperfil">
+                  <h4>Pré-Cadastro Chaves - PIX</h4> 
+                  <p>Deixe salvas suas chaves PIX para que conseguirmos enviar os investimentos para você</p>
+                  <input type="text" name="celular_pix" id="celular_pix" placeholder="(+55)"><br>
+                  <input type="text" name="celular_pix" id="celular_pix" placeholder="Email"><br>
+                  <input type="text" name="celular_pix" id="celular_pix" placeholder="000.000.000-00">
+                </div>
+                <div class="box_mudaperfil">
+                    <h4>Saldo</h4>
+                    <p>Aqui você será consegue monitorar e resgatar o seu saldo de suas campanhas.</p>
+                    <input type="text" name="saldo_usuario" id="saldo_usario" placeholder="R$ 2,000.00">
+                    <button class="btnpadrao">Resgate seu saldo</button>
+                  </div>
+                  <div class="box_mudaperfil">
+                      <h4>Histórico de saques</h4>
+                    <table>
+                        <thead>
+                            <th>ID</th>
+                            <th>Data</th>
+                            <th>Saque</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>52871</td>
+                                <td>24/09/2020</td>
+                                <td>R$1,000.00</td>
+                            </tr>
+                            <tr>
+                                <td>52671</td>
+                                <td>24/10/2020</td>
+                                <td>R$1,000.00</td>
+                            </tr>
+                            <tr>
+                                <td>52671</td>
+                                <td>24/10/2020</td>
+                                <td>R$1,000.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                 
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include ('../partials/foot.ejs'); -%>

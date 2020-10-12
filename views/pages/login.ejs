@@ -1,0 +1,39 @@
+<%- include ('../partials/head.ejs'); -%>
+
+<main>
+    <div id="loginbox">
+        <div class="login-logobg">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo da empresa">
+            </a>
+        </div>
+        <div class="logininput">
+        <div class="login">
+            <span>Não possui uma conta? <button id="cadastrar">Cadastre-se</button></span>
+
+            <h2>Login</h2>
+            
+                <label for="email_login">Email</label>
+                <input type="email" name="email_login" id="email_login">
+                <label for="senha">Senha</label>
+                <input type="password" name="password" id="password">
+                <span><a href="#">Esqueceu sua senha?</a></span>
+                <input type="checkbox" name="lembra_check" id="lembra_check">
+                <label for="lembra_check">Lembrar-me</label>
+
+                <button  id="entrar">Entrar</button>
+           
+        </div>
+        <div class="cadastro">
+            <h2>Cadastro</h2>
+            <div class="cadastro-escolha">
+                <a href="cadastro?n=investidor">Quero Investir</a>
+                <a href="cadastro?n=empreendedor">Preciso de investimento</a>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</main>
+<script src="js/loginController.js"></script>
+<%- include ('../partials/foot.ejs'); -%>

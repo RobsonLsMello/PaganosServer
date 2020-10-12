@@ -1,0 +1,52 @@
+<%- include ('../partials/head.ejs'); -%>
+
+<div id="explore">
+    <h2>Ache o melhor investimento para você!</h2>
+    <label>Quero investir em:
+    <select name="categorias_explore" id="categorias_explore">
+        <option value="">Categorias</option>
+    </select></label>
+    <label>Localização:
+        <input type="text" list="localizacoes" placeholder="Localização" name="localizacao_explore" id="localizacao_explore" />
+        <div id="localizacoes" style="display: none;">
+            <ul id="lista">
+                
+            </ul>
+        </div>
+    </label>
+    <label for="investimento_explore">Investimento:</label>
+    <select name="investimento_explore" id="investimento_explore">
+        <option value="500">R$500,00</option>
+        <option value="1000">R$1000,00</option>
+        <option value="1500">R$1500,00</option>
+    </select>
+</div>
+<main>
+    <section class="exibicao">
+        <div class="exibicao-container">
+            <div class="result"></div>
+            <div class="result"></div>
+            <div class="result"></div>
+            <div class="result"></div>
+        </div>
+    </section>
+    <section class="exibicao">
+        <div class="exibicao-container">
+            <div class="result"></div>
+            <div class="result"></div>
+            <div class="result"></div>
+            <div class="result"></div>
+        </div>
+    </section>
+    <section class="exibicao">
+        <div class="exibicao-container">
+            <div class="result"></div>
+            <div class="result"></div>
+            <div class="result"></div>
+            <div class="result"></div>
+        </div>
+    </section>
+    
+</main>
+
+<%- include ('../partials/foot.ejs'); -%>

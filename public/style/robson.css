@@ -1,0 +1,60 @@
+#cadastrobox form{
+    max-width: 852px;
+    width: 100%;
+}
+
+#cadastrobox input[type="button"], #cadastrobox input[type="submit"] {
+    width: 202px;
+    border: 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#cadastrobox label{
+    color: white;
+}
+
+#cadastrobox input{
+    border-radius: 10px;
+    border: 0;
+    max-width: 469px;
+    width: 80%;
+}
+
+#localizacoes{
+    background-color: white;
+    width: 12rem;
+    max-height: 200px;
+    transition: 1s;
+    overflow-y: auto;
+}
+
+#localizacoes  li{
+    list-style-type: none;
+    text-align: left;
+    font-size: 10px;
+    padding: 5px 10px
+}
+
+#localizacoes  li:hover{
+    transition: 2s;
+    background-color: rgb(185, 182, 182);
+}
+
+#localizacao_explore{
+    width: 12rem;
+}
+
+#entrar{
+    display: block;
+}
+
+.exibicao-container > .result{
+    background-size: cover;
+    cursor: pointer;
+}
+
+.result p{
+    background-color: #000000ab;
+    color: white;
+    padding: 10px 5px;
+}

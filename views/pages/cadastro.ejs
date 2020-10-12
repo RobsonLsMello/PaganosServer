@@ -1,0 +1,40 @@
+<%- include ('../partials/head.ejs'); -%>
+<main>
+    <div id="cadastrobox">
+        <form action="/cadastro/usuario" method="POST" id="">
+            <div class="cadastraemprendpg1">
+                <label for="nome_usuario">Nome do Usuário</label>
+                <input type="text" name="nome_usuario" id="nome_usuario">
+                <label for="email_usuario">Email</label>
+                <input type="email" name="email_usuario" id="email_usuario">
+                <label for="CPF_usuario">CPF</label>
+                <!--NÃO ESQUECER DE CRIAR MÁSCARA JAVASCRIPT-->
+                <input type="text" name="CPF_usuario" id="CPF_usuario">
+                <label for="senha_usuario">Senha</label>
+                <input type="password" name="senha_usuario" id="senha_usuario">
+                <input type="button" value="Avançar" id="avancar">
+                <!--O botão avançar ativa uma função que oculta a pagina 1
+                e mostra a página 2-->
+            </div>
+            <div class="cadastraemprendpg2"  style="display: none;">
+                <label for="CNPJ_usuario">CNPJ</label>
+                <input type="text" name="CNPJ_usuario" id="CNPJ_usuario">
+                <label for="RazSocial_usuario">Razão Social</label>
+                <input type="text" name="RazSocial_usuario" id="RazSocial_usuario">
+                <label for="nmfantasia_usuario">Nome Fantasia</label>
+                <input type="text" name="nmfantasia_usuario" id="nmfantasia_usuario">
+                <label for="CEP_usuario">CEP</label>
+                <input type="text" name="CEP_usuario" id="CEP_usuario">
+                <label for="Cidade_usuario">Cidade</label>
+                <input type="text" name="Cidade_usuario" id="Cidade_usuario">
+                <label for="UF_usuario">UF</label>
+                <input type="text" name="UF_usuario" id="UF_usuario">
+                <label for="PIX_usuario">Chave PIX</label>
+                <input type="text" name="PIX_usuario" id="PIX_usuario">
+                <input type="button" value="Cadastrar" id="cadastrar">
+            </div>
+        </form>
+    </div>
+</main>
+<script src="js/cadastroController.js"></script>
+<%- include ('../partials/foot.ejs'); -%>

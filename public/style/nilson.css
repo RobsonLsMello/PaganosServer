@@ -1,0 +1,161 @@
+#loginbox{
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    margin-top: 4rem;
+}
+
+#loginbox .login-logobg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 418px;
+    width: 24%;
+    background-color: #5E8EB2;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+
+
+.login-logobg img{
+    width: 160px;
+}
+
+#loginbox .logininput{
+    max-height: 418px;
+    max-height: 400px;
+    width: 36%;
+    background-color: #2B4355;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.login form span a{
+    text-decoration: none;
+    color: white;
+    margin-left: 140px;
+    font-size: 12px;
+}
+
+.login label{
+    font-size: 15;
+}
+
+
+
+.logininput h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-bottom: 20px
+}
+
+.logininput input{
+    border: solid 1px white;
+    border-radius: 10px;
+    height: 20px;
+    width: 260px;
+    margin-bottom: 0.3rem;
+    outline: none;
+    padding-left: 5px;
+}
+
+.logininput input[type="checkbox"]{
+    display: inline-block;
+    margin-top:5px;
+    position: relative;
+    left: -16px;
+}
+
+.logininput label:nth-of-type(2){
+    margin-top: 10px
+
+}
+
+.logininput label:nth-of-type(3){
+    position: relative;
+    top: -22px;
+
+}
+
+
+
+
+
+
+
+.logininput label{
+    margin-bottom: 0.3rem;
+}
+
+
+.logininput a{
+    margin-top: 5px;
+}
+
+
+.login button{
+    width: 90px;
+    height: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.login label,.login span{
+    color: white;
+    display: block
+}
+
+.login form, .login h2{
+    margin-right: 50px;
+    color: white;
+}
+
+.login a{
+    display: block;
+}
+
+.cadastro-escolha{
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.cadastro h2{
+  color: #fff;
+}
+
+.cadastro-escolha a{
+    text-align: center;
+    padding: 20px;
+    background-color: blue;
+    width: 50%;
+    vertical-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.cadastro-escolha :first-child{
+    margin-right: 10px;
+    background-color: #5E8EB2;
+}
+
+.cadastro-escolha :last-child{
+    background-color: #fff;
+    color: #2B4355;
+}
+
+
+.cadastro h2{
+
+    margin-bottom: 50px;
+}
+
