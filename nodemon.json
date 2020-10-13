@@ -1,9 +1,9 @@
 {
     "env":{
-        "MYSQL_USER" : "root",
-        "MYSQL_PASSWORD" : "",
-        "MYSQL_DATABASE" : "db_pega_nois",
-        "MYSQL_HOST" : "localhost",
+        "MYSQL_USER" : "teledevs",
+        "MYSQL_PASSWORD" : "tabela12",
+        "MYSQL_DATABASE" : "db_paga_nos",
+        "MYSQL_HOST" : "mysql669.umbler.com",
         "MYSQL_PORT" : "3306"
     }
 
