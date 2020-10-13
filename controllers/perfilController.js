@@ -5,7 +5,7 @@ let DaoInvestimento = require("../model/DAOInvestimento");
 let DAORecompensa = require("../model/DAORecompensa");
 let DAOUsuario = require("../model/DAOUsuario");
 exports.showView = (req, res, next) => {
-    res.render('pages/Perfil',{
+    res.render('pages/perfil',{
         title: "Perfil",
         scriptEspecial: "/js/perfilController.js"
     });    
