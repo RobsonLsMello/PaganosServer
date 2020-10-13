@@ -4,11 +4,13 @@ module.exports = class DAO
     {
         this.mysql = require('mysql');
         this.conn = this.mysql.createConnection({
-            host     : process.env.MYSQL_HOST,
-            user     : process.env.MYSQL_USER,
-            password : process.env.MYSQL_PASSWORD,
-            database : process.env.MYSQL_DATABASE
+            host     : 'mysql669.umbler.com',
+            user     : 'teledevs',
+            password : 'tabela12',
+            database : 'db_paga_nos',
+            port : '41890',
         });
+        console.log(this.conn);
         this.conn.connect();
     }
     

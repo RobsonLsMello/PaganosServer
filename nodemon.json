@@ -4,7 +4,7 @@
         "MYSQL_PASSWORD" : "tabela12",
         "MYSQL_DATABASE" : "db_paga_nos",
         "MYSQL_HOST" : "mysql669.umbler.com",
-        "MYSQL_PORT" : "3306"
+        "MYSQL_PORT" : "41890"
     }
 
 }
