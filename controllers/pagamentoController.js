@@ -1,7 +1,7 @@
 let DAOInvestimento = require('../model/DAOInvestimento')
 
 exports.showView = (req,res,next) =>{
-    res.render('pages/Pagamento',{
+    res.render('pages/pagamento',{
         title: "Pagamento",
         scriptEspecial: ""
     });    

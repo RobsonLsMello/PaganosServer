@@ -3,7 +3,7 @@ let DAOCampanha = require("../model/DAOCampanha");
 let DAOCategoria = require("../model/DAOCategoria");
 
 exports.showView = (req, res, next) => {
-    res.render('pages/Explorar',{
+    res.render('pages/explorar',{
         title: "Explorar",
         scriptEspecial: "/js/explorarController.js"
     });    
