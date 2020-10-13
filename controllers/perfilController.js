@@ -24,7 +24,7 @@ exports.cadCampanha = (req, res, next) => {
         dt_inicio_campanha: req.body.dt_inicio_campanha,
         dt_final_campanha: req.body.dt_final_campanha
     }
-  
+    console.log(campanha);
     let daoCampanha = new DAOCampanha();
     daoCampanha.cadastraCampanha(campanha,res);
 };

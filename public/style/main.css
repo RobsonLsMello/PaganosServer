@@ -14,6 +14,62 @@ body {
   overflow-x: hidden;
 }
 
+#ModalEditar {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.ConteudoEditar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+  background-color: #fff;
+  padding: 2rem;
+  margin: 10rem auto;
+  border-radius: 10px;
+}
+
+.ConteudoEditar span {
+  background-color: red;
+  float: right;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.ConteudoEditar h3 {
+  text-align: center;
+  margin: 1rem;
+}
+
+.ConteudoEditar label {
+  display: block;
+  margin: 1rem 0;
+}
+
+.ConteudoEditar select {
+  float: unset;
+  margin: 1rem 0;
+}
+
+.ConteudoEditar button {
+  display: block;
+  margin: 0.2rem auto;
+}
+
 .btnpadrao {
   background-color: #fff;
   color: #2B4355;
@@ -414,7 +470,13 @@ input:checked + label {
   margin: 0.4rem auto;
 }
 
-.sobre_campanha .card-recompensa .detalhe {
+.n_deapoiadores {
+  text-align: left;
+  font-size: 1.3rem;
+  margin: 1rem;
+}
+
+.detalhe {
   font-size: 0.8rem;
   color: #898989;
   text-align: center;
@@ -600,6 +662,46 @@ progress {
 
 .comentarios_campanha {
   margin-top: 1rem;
+}
+
+.criacampanha {
+  background-color: #2B4355;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  width: 30%;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.criacampanha label {
+  font-weight: bold;
+  color: #fff;
+  margin-left: 0 !important;
+}
+
+.criacampanha .detalhe {
+  text-align: left;
+}
+
+.criacampanha input {
+  padding: 0.4rem;
+  width: 30%;
+  border-radius: 10px;
+  margin: 1rem 0;
+  background-color: #2B4355;
+  border: 3px solid white;
+}
+
+.criacampanha input, .criacampanha label {
+  margin-left: 1rem;
+}
+
+.criacampanha img {
+  border: 4px solid white;
+  width: 180px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 #perfil {

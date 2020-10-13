@@ -15,8 +15,65 @@
             <input type="radio" name="tabs" id="sair_perfil" value="sair">
             <label for="sair_perfil">Sair</label>
             <div class="tab criar_campanha">
-                <!--Janela Modal Javascript-->
-                <button id="btnCriaCampanha">Crie sua campanha</button>
+                <div id="ModalEditar">
+                    <div class="ConteudoEditar">
+                        <span onclick="fechaModal()">Fechar</span>
+                        <div class="criacampanha">
+                            <label for="nome_campanha">Nome da Campanha</label>
+                            <input type="text" name="nome_campanha" id="nome_campanha">
+                            <label for="frase_camapnha">Frase de apresentação</label>
+                            <input type="text" name="frase_campanha" id="frase_campanha">
+                        </div>
+                        <div class="criacampanha">
+                            <label for="sobre_campanha">Sobre a Campanha</label>
+                            <textarea name="sobre_campanha" id="sobre_campanha"></textarea>
+                            <label for="Categorias">
+                                <select name="categorias_explore" id="categorias_explore">
+                                    <option value="none" disabled>Categorias</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="criacampanha">
+                            <label for="datainicio_campanha">Datas - Início</label>
+                            <input type="date" name="datainicio_campanha" id="datainicio_campanha">
+                            <p class="detalhe">
+                                *Defina a data que ocorrerá sua campanha
+                            </p>
+                            <label for="datatermino_campanha">Datas - Término</label>
+                            <input type="date" name="datatermino_campanha" id="datatermino_campanha">
+                            <p class="detalhe">
+                                *Defina a data que ocorrerá sua campanha
+                            </p>
+                        </div>
+                        <div class="criacampanha">
+                            <label for="metafinal_campanha">Meta Final</label>
+                            <input type="number" name="metafinal_campanha" id="metafinal_campanha">
+                            <p class="detalhe">*O "Pague nós" receberá uma comissão de 6% com base no investimento</p>
+                            <label for="lanceminimo_campanha">Lance Mínimo</label>
+                            <input type="number" name="lanceminimo_campanha" id="lanceminimo_campanha">
+                        </div>
+                        <div class="criacampanha">
+                            <h4>Investimento</h4>
+                            <div class="containercheckbox">
+                                <input type="checkbox" name="emprestimo_financeiro" value="1" id="emprestimo_financeiro">
+                                <label for="emprestimo_financeiro">Empréstimo Financeiro</label>
+                                <input type="checkbox" name="participacao_lucro" value="2" id="participacacao_lucro">
+                                <label for="paticipacao_lucro">Participação no Lucro</label>
+                                <input type="checkbox" name="beneficios_campanha" value="3" id="beneficios_campanha">
+                                <label for="beneficios_campanha">Benefícios (desconto ou voucher)</label>
+                            </div>
+                        </div>
+                        <div class="criacampanha">
+                            <label for="imagem_campanha">
+                                Imagem da campanha
+                            </label>
+                            <img class="imagem_carregada_campanha" src="img/placeholder.png" alt="Restaurante">
+                            <input type="file" name="imagem_campanha" id="imagem_campanha">
+                        </div>
+                        <button class="btnpadrao">Comece sua campanha</button>
+                    </div>
+                </div>
+                <button id="btnCriaCampanha" onclick="abrirModal()">Crie sua campanha</button>
                 <h3>Campanhas</h3>
                 <table id="tcampanhas">
                     <thead>

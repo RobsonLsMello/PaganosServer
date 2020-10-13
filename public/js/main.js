@@ -1,4 +1,13 @@
-
+// //Campo Destinado ao Slider e ao Framework
+// new Glider(document.querySelector('.glider'), {
+//     slidesToShow: 1,
+//     dots: '#dots',
+//     draggable: true,
+//     arrows: {
+//       prev: '.glider-prev',
+//       next: '.glider-next'
+//     }
+//   });
 
 var transformarParametrosUrlJson = () =>{
     let jsonString = '';
@@ -21,4 +30,13 @@ var verificarLogin = () =>{
     }
 }
 
+
+function abrirModal(){
+    let caixaModal = document.getElementById('ModalEditar')
+    caixaModal.style.display= 'block'
+}
+function fechaModal(){
+    let caixaModal = document.getElementById('ModalEditar')
+    caixaModal.style.display= 'none'
+}
 verificarLogin();

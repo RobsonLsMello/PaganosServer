@@ -187,28 +187,32 @@ mostrarRecompensas = (parentElement) =>{
 cadastrarCampanha = () =>{
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    var dados ={
-        nm_campanha: document.querySelector("#nomeCampanha").value,
-        ds_headline: document.querySelector("#headline").value,
-        vl_lance_minimo: document.querySelector("#lanceMinimo").value,
-        ds_campanha: document.querySelector("#sobre").value,
-        im_foto: document.querySelector("#foto").value,
-        cd_negocio: document.querySelector("#nomeCampanha").value,
-        cd_categoria: document.querySelector("#categoria").value,
-        vl_meta:  document.querySelector("#meta").value,
-        dt_inicio_campanha: document.querySelector("#dataInicio").value,
-        dt_final_campanha: document.querySelector("#dataFinal").value
-    }
+
+    var raw = JSON.stringify(
+        {
+            "nm_campanha": document.querySelector("#nome_campanha").value,
+            "ds_headline": document.querySelector("#frase_campanha").value,
+            "vl_lance_minimo": document.querySelector("#lanceminimo_campanha").value,
+            "ds_campanha": document.querySelector("#sobre_campanha").value,
+            "im_foto": "/default.png",
+            "cd_negocio": localStorage.getItem('negocio'),
+            "cd_categoria": document.querySelector("#categorias_explore").value,
+            "vl_meta":  document.querySelector("#metafinal_campanha").value,
+            "dt_inicio_campanha": document.querySelector("#datainicio_campanha").value,
+            "dt_final_campanha": document.querySelector("#datatermino_campanha").value
+        }
+        );
+
     var requestOptions = {
-        method: 'GET',
-        headers: myHeaders,
-        raw: JSON.stringify(dados),
-        redirect: 'follow'
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
     };
-    fetch(`/perfil/cadCampanha`, requestOptions)
+    fetch(`/perfil/cadastro-campanha`, requestOptions)
     .then(response => response.text())
     .then(result => {
-        let retorno = JSON.parse(result).Dados;
+        let retorno = JSON.parse(result).Dados[0];
         console.log(retorno);
         if(retorno.campanha != 0){
             location.href = `/campanha?c=${retorno.campanha}`;
@@ -220,8 +224,12 @@ document.querySelector("#sair_perfil").addEventListener("change", ()=>{
     localStorage.clear();
     location.href = "/";
 });
+
+document.querySelector(".btnpadrao").addEventListener("click", ()=>{
+    cadastrarCampanha();
+})
 mostrarUsuario();
 mostrarDadosCampanhas();
 mostrarDadosInvestimentos();
-mostrarRecompensas('');
+//mostrarRecompensas('');
 ApiCategoria('categorias_explore');
